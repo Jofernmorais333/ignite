@@ -37,7 +37,7 @@
     <properties>
         <avatica.version>1.26.0</avatica.version>
         <calcite.version>1.40.0</calcite.version>
-        <checker.version>3.10.0</checker.version>
+        <checker.version>3.53.0</checker.version>
         <failureaccess.version>1.0.1</failureaccess.version>
         <immutables.version>2.8.2</immutables.version>
         <janino.version>3.1.12</janino.version>
@@ -343,13 +343,8 @@
                         </goals>
                         <configuration>
                             <target>
-                                <taskdef name="fmpp" classname="fmpp.tools.AntTask" />
-                                <fmpp
-                                    configuration="${project.build.directory}/codegen/config.fmpp"
-                                    sourceRoot="${project.build.directory}/codegen/templates"
-                                    outputRoot="${project.build.directory}/generated-sources/fmpp"
-                                    data="tdd(${project.build.directory}/codegen/config.fmpp), default: tdd(${project.build.directory}/codegen/default_config.fmpp)"
-                                />
+                                <taskdef name="fmpp" classname="fmpp.tools.AntTask"/>
+                                <fmpp configuration="${project.build.directory}/codegen/config.fmpp" sourceRoot="${project.build.directory}/codegen/templates" outputRoot="${project.build.directory}/generated-sources/fmpp" data="tdd(${project.build.directory}/codegen/config.fmpp), default: tdd(${project.build.directory}/codegen/default_config.fmpp)"/>
                             </target>
                         </configuration>
                     </execution>
